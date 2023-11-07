@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h1>{{ title }}</h1>
+    <h3>{{ text }}</h3>
     <li v-for="food in foods" v-bind:key="food">{{ food }}</li>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -93,6 +94,10 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
+    text: {
+      type: String,
+      default: "Default Text", // Nilai default untuk prop 'text'
+    },
   },
   data() {
     return {
